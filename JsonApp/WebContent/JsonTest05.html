@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JsonTest05.html</title>
+
+<script type="text/javascript">
+
+	var myJsonObject5 =
+	{
+		"test" : function(args)
+		{
+			alert("Method Test : " + args);
+		}
+	}
+	
+	var t = myJsonObject5.test;
+	/* var t = myJsonObject5.test(); */
+	/* 매개변수 넣기 가넝한 */
+	/* t라는 함수 호출해서 parkjungjoon 매개변수 넘겨줌 */
+
+</script>
+
+</head>
+<body>
+
+<form>
+	<input type="button" value="click1" onclick="t('parkjeongjun')">
+	<!-- 실행 결과 : Method Test : parkjeongjun -->
+	
+	<input type="button" value="click2" onclick="eval('var a=' + myJsonObject5.test); a('parkjeongjun')">
+	<!-- 실행 결과 : Method Test : parkjeongjun -->
+	
+	<input type="button" value="click3" onclick="eval('(' + myJsonObject5.test + ')(\'parkjeongjun\')')">
+	<!-- myJsonObject5.test('parkjeongjun')이랑 같음 ↑ -->
+	<!-- 실행 결과 : Method Test : parkjeongjun -->
+</form>
+
+</body>
+</html>

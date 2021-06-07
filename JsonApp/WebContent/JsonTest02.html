@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JsonTest02.html</title>
+
+<script type="text/javascript">
+
+	/* 아래 구문이랑 같음 
+	var myJsonObject = {"test" : "hello"} */
+
+	var myJsonObject2 =
+	{
+		"test" : "hello"
+		/* "test" : "new test" */
+	}
+
+</script>
+
+</head>
+<body>
+
+<form>
+	<!-- <input type="button" value="click" onclick="alert(myJsonObject)"> -->
+	<!-- 실행 결과 : [object Object] 오브젝트 타입의 오브젝트 (객체라서 내용이 나오는게 아님) -->
+	
+	<!-- <input type="button" value="click2" onclick="alert(typeof myJsonObject)"> -->
+	<!-- 실행 결과 : object 오브젝트 타입 -->
+	
+	<input type="button" value="click" onclick="alert(myJsonObject2.test)">
+	<!-- 실행 결과 : hello -->
+	
+	<input type="button" value="click2" onclick="myJsonObject2.test='new test'; alert(myJsonObject2.test)">
+	<!-- 클릭하면 myJsonObject2.test에 new test넣겠다 그리고 다시 test 찍어보겠다. -->
+	<!-- 실행 결과 : new test -->
+</form>
+
+</body>
+</html>
